@@ -15,4 +15,8 @@ class Guest extends Model
     );
 
     protected $primaryKey = 'guest_id';
+
+    public function reservations(){
+        return $this->hasMany('App\Reservation','guest_id','guest_id');
+    }
 }

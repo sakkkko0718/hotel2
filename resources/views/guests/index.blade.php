@@ -13,7 +13,7 @@
                         <td>
                             @if ($guest->reservations != null)
                             @foreach ($guest->reservations as $reservation)
-                                {{$reservation->reservations_id}}
+                                {{$reservation->reservation_id}}
                             @endforeach
                             @endif
                         </td>
