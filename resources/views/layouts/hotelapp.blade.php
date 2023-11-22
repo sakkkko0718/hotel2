@@ -11,12 +11,18 @@
             width: 100%;
         }
         .page-title{
-            margin: 5px 0 20px 0;
+            margin: 30px 0 20px 0;
+        }
+        .page-content{
+            margin: 0 auto;
         }
         table{
             margin: 0 auto;
         }
         th{
+            background-color: #BBCCE9;
+            color: #0068B7;
+            letter-spacing: 0.5ch;
             border: #9FA0A0 solid 1px;
             padding: 10px;
             width: 300px;
@@ -24,6 +30,7 @@
         td{
             border: #9FA0A0 solid 1px;
             padding: 5px 10px;
+            max-height: 50px;
         }
         .send{
             text-align: center;
@@ -34,6 +41,8 @@
         <div class="page-title">
             <h1>@yield('title')</h1>
             <p>管理者用ページ</p>
+        </div>
+        <div class="page-content">
             @yield('content')
         </div>
     </div>
