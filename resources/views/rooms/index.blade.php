@@ -1,5 +1,5 @@
 @extends('layouts.hotelapp')
-@section('title','部屋種類管理')
+@section('title','部屋種類')
 
 @section('content')
 <table>
