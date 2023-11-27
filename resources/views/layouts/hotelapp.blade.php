@@ -8,7 +8,7 @@
             max-width: 1200vh;
         }
         .page-innner{
-            width: 100%;
+            width: 90%;
         }
         .page-title{
             margin: 30px 0 20px 0;
@@ -42,6 +42,7 @@
             <h1>@yield('title')</h1>
             <p>管理者用ページ</p>
         </div>
+        <div class="menu"><a href="/masters">部屋管理</a><a href="/guests">利用者</a><a href="/rooms">部屋</a><a href="/reservations">予約詳細</a></div>
         <div class="page-content">
             @yield('content')
         </div>
