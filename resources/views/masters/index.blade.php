@@ -3,6 +3,13 @@
 
 @section('content')
 <table>
+    @csrf
+    {{-- 検索 --}}
+    <form action="/masters" method="get">
+        <input type="search" name="room_name" style="width: 150px">
+        <input type="submit" value="検索">
+    </form>
+
     <tr class="table-head"><th>部屋管理番号</th><th>部屋の種類</th><th>制限人数</th><th>部屋の名前</th></tr>
         @foreach ($masters as $master)
         <tr>

@@ -18,10 +18,14 @@ Route::get('/', function () {
 Route::get('guests','GuestsController@index');
 
 Route::get('masters','MastersController@index');
+Route::get('masters','MastersController@search');
 
 Route::get('rooms','RoomsController@index');
 
 Route::get('reservations','ReservationsController@index');
-Auth::routes();
+Route::get('reservations','ReservationsController@search');
+
+
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

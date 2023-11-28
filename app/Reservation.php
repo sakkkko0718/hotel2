@@ -13,7 +13,12 @@ class Reservation extends Model
         'people' => 'required',
         'checkin' => 'required',
         'checkout' => 'required'
-        );
+    );
+
+    public static function getData($from,$until){
+        $data = Reservation::whereBetween('checkin',[$from,$until])->get();
+        return $data;
+    }
 
     protected $primaryKey = 'reservation_id';
 
