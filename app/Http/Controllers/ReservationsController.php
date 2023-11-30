@@ -15,12 +15,11 @@ class ReservationsController extends Controller
     }
 
     public function search(Request $request){
-        // $from = $request->input('from');
-        // $until = $request->input('until');
         if(!empty($request['from']) &&! empty($request['until'])){
+            //fromとuntilに入力した日付を取得
             $data = Reservation::getData($request['from'],$request['until']);
         } else {
-            //何も検索しない時
+            //何も検索しない時は全て取得
             $data = Reservation::get();
         }
 

@@ -4,11 +4,13 @@
 @section('content')
 <table>
     @csrf
-    {{-- 検索 --}}
+    {{-- 検索ここから --}}
+    {{-- getメソッドを検索クエリにチェーンする --}}
     <form action="/masters" method="get">
-        <input type="search" name="room_name" style="width: 150px">
+        <input type="search" name="input" style="width: 150px">
         <input type="submit" value="検索">
     </form>
+    {{-- 検索ここまで --}}
 
     <tr class="table-head"><th>部屋管理番号</th><th>部屋の種類</th><th>制限人数</th><th>部屋の名前</th></tr>
         @foreach ($masters as $master)

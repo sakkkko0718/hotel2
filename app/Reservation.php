@@ -16,6 +16,7 @@ class Reservation extends Model
     );
 
     public static function getData($from,$until){
+        //fromとuntilに入力した間(Between)のチェックイン日を取得する。
         $data = Reservation::whereBetween('checkin',[$from,$until])->get();
         return $data;
     }
